@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Películas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>API de Películas</h1>
+            <p class="lead">API RESTful para gestionar películas y géneros</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header primary">
+                        <h2>Géneros</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Gestiona los géneros de películas</p>
+                        <div class="button-group">
+                            <a href="/api/genres" class="btn btn-primary">
+                                <span class="badge info">GET</span> Obtener todos
+                            </a>
+                            <a href="/api/genres/search?name=" class="btn btn-primary">
+                                <span class="badge info">GET</span> Buscar por nombre
+                            </a>
+                            <a href="/api/genres/filter/active?active=true" class="btn btn-primary">
+                                <span class="badge info">GET</span> Filtrar activos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header danger">
+                        <h2>Películas</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Gestiona el catálogo de películas</p>
+                        <div class="button-group">
+                            <a href="/api/movies" class="btn btn-danger">
+                                <span class="badge info">GET</span> Obtener todas
+                            </a>
+                            <a href="/api/movies/search?title=" class="btn btn-danger">
+                                <span class="badge info">GET</span> Buscar por título
+                            </a>
+                            <a href="/api/movies/filter/year?year=" class="btn btn-danger">
+                                <span class="badge info">GET</span> Filtrar por año
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card full-width">
+                <div class="card-header secondary">
+                    <h2>Información de la API</h2>
+                </div>
+                <div class="card-body">
+                    <h3>Endpoints Base:</h3>
+                    <ul>
+                        <li><code>/api/genres</code> - Gestión de géneros</li>
+                        <li><code>/api/movies</code> - Gestión de películas</li>
+                    </ul>
+                    <h3>Métodos HTTP:</h3>
+                    <ul>
+                        <li><span class="badge info">GET</span> Obtener recursos</li>
+                        <li><span class="badge success">POST</span> Crear recursos</li>
+                        <li><span class="badge warning">PUT</span> Actualizar recursos</li>
+                        <li><span class="badge danger">DELETE</span> Eliminar recursos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>Cusinier Candela, Marsico Abril</strong></p>
+            <p>Aplicaciones Híbridas</p>
+            <p>Tecnicatura en Diseño y Programación Web</p>
+            <p class="small">Leonardo Da Vinci - Escuela Superior de Arte Multimedial | 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
