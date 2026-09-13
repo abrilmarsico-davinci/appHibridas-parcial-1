@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Películas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <h1>🎬 API de Películas</h1>
+            <p class="lead">API RESTful para gestionar películas y géneros</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Géneros</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">Gestiona los géneros de películas</p>
+                        <div class="btn-group-vertical w-100" role="group">
+                            <a href="/api/genres" class="btn btn-outline-primary text-start">
+                                <span class="badge bg-info">GET</span> Obtener todos
+                            </a>
+                            <a href="/api/genres/search?name=" class="btn btn-outline-primary text-start">
+                                <span class="badge bg-info">GET</span> Buscar por nombre
+                            </a>
+                            <a href="/api/genres/filter/active?active=true" class="btn btn-outline-primary text-start">
+                                <span class="badge bg-info">GET</span> Filtrar activos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">Películas</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted">Gestiona el catálogo de películas</p>
+                        <div class="btn-group-vertical w-100" role="group">
+                            <a href="/api/movies" class="btn btn-outline-danger text-start">
+                                <span class="badge bg-info">GET</span> Obtener todas
+                            </a>
+                            <a href="/api/movies/search?title=" class="btn btn-outline-danger text-start">
+                                <span class="badge bg-info">GET</span> Buscar por título
+                            </a>
+                            <a href="/api/movies/filter/year?year=" class="btn btn-outline-danger text-start">
+                                <span class="badge bg-info">GET</span> Filtrar por año
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0">Información de la API</h5>
+                    </div>
+                    <div class="card-body">
+                        <h6>Endpoints Base:</h6>
+                        <ul>
+                            <li><code>/api/genres</code> - Gestión de géneros</li>
+                            <li><code>/api/movies</code> - Gestión de películas</li>
+                        </ul>
+                        <h6 class="mt-4">Métodos HTTP:</h6>
+                        <ul>
+                            <li><span class="badge bg-info">GET</span> Obtener recursos</li>
+                            <li><span class="badge bg-success">POST</span> Crear recursos</li>
+                            <li><span class="badge bg-warning">PUT</span> Actualizar recursos</li>
+                            <li><span class="badge bg-danger">DELETE</span> Eliminar recursos</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1"><strong>Cusinier Candela, Marsico Abril</strong></p>
+            <p class="mb-1">Aplicaciones Híbridas</p>
+            <p class="mb-1">Tecnicatura en Diseño y Programación Web</p>
+            <p class="text-muted small">Leonardo Da Vinci - Escuela Superior de Arte Multimedial | 2026</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
