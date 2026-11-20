@@ -1,3 +1,6 @@
+import cors from 'cors';
+import authRouter from './auth/authRouter.js';
+import movieRoutes from './routes/movieRoutes.js';
 import express from 'express';
 import dotenv from 'dotenv';
 import chalk from 'chalk';
@@ -7,6 +10,7 @@ import routerAPI from './routes/index.js';
 dotenv.config();
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
@@ -19,6 +23,8 @@ app.get('/', (req, res) => {
     res.sendFile(new URL('./public/index.html', import.meta.url).pathname);
 });
 
+app.use('/api/auth', authRouter);
+app.use('/api/movies', movieRoutes);
 routerAPI(app);
 
 app.use((req, res) => {
